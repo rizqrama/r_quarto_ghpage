@@ -5,6 +5,8 @@ format:
   dashboard:
     orientation: columns
     theme: flatly
+    nav-buttons: [github]
+    github: https://github.com/rizqrama/r_quarto_ghpage
 ---
 
 
@@ -225,6 +227,8 @@ bdg_temp_columnrange <- hchart(
   )
 ```
 
+# Dashboard
+
 ## Column
 
 ### Row
@@ -244,8 +248,28 @@ kabkot_berangin_bar
 
 ## Column
 
-
 ```{r}
 #| title: Prediksi Suhu Kota Bandung Hari ini dan 2 Hari ke Depan
 bdg_temp_columnrange
 ```
+
+
+# About
+
+**Contoh Dashboard Cuaca Jawa Barat**
+
+This dashboard is part of my exercise in developing using [Quarto Dashboards](https://quarto.org/docs/dashboards/), publishing on [Github Pages](https://pages.github.com/), and then automatically updated it using [Github Actions](https://github.com/features/actions).
+
+**Data and Packages**
+
+The input data for this dashboard is downloaded using a [Weather API](https://github.com/pace11/weather-api?tab=readme-ov-file) which acts as a (unofficial) weather API wrapper from XML to JSON references from [API of BMKG(Badan Meteorologi, Klimatologi, dan Geofisika)](https://data.bmkg.go.id).
+
+The dashboard uses the following packages:
+
+-   Data visualization
+    -   [highcharter](https://jkunst.com/highcharter/index.html)
+-   Utility
+    -   [dplyr](https://dplyr.tidyverse.org/)
+    -   [tidyr](https://tidyr.tidyverse.org/)
+    -   [lubridate](https://lubridate.tidyverse.org/)
+    -   [janitor](https://cran.r-project.org/web/packages/janitor/index.html)
