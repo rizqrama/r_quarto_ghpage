@@ -196,18 +196,7 @@ tt3_y <- sprintf("{point.%s}°", c("min_temperature", "mean_temp", "max_temperat
 
 tt3 <- tooltip_table(tt3_x, tt3_y)
 
-bdg_temp_columnrange <- hc_yAxis(
-    max = 30,
-    min = -10,
-    labels = list(format = "{value} C"),
-    showFirstLabel = FALSE
-  ) |>
-  hc_xAxis(
-    title = list(text = ""), 
-    gridLineWidth = 0.5,
-    labels = list(format = "{value: %b}")
-  )
-hchart(
+bdg_temp_columnrange <- hchart(
   suhu_harian_bdg,
   type = "columnrange",
   hcaes(
