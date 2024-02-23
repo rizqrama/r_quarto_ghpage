@@ -44,6 +44,8 @@ weather_data_raw  <- parsed_data$data$forecast$area %>%
         kabkot = map_chr(lokasi, ~unlist(strsplit(.x, ","))[2])
         ) %>% 
     select(-lokasi)
+
+tanggal_hari_ini  <- min(weather_data_raw$tanggal) %>% as_date()
 ```
 
 
@@ -273,3 +275,5 @@ The dashboard uses the following packages:
     -   [tidyr](https://tidyr.tidyverse.org/)
     -   [lubridate](https://lubridate.tidyverse.org/)
     -   [janitor](https://cran.r-project.org/web/packages/janitor/index.html)
+   
+*dashboard updated at `{r} tanggal_hari_ini`*
